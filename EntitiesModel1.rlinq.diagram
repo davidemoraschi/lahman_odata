@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityDiagrams>
+  <entityDiagramsDiagram dslVersion="2.0.0.0" absoluteBounds="0, 0, 11, 9.125" name="Adventureworks" isDefault="true">
+    <DomainModelMoniker name="/Adventureworks" />
+    <nestedChildShapes>
+      <classShape Id="b7bae1f6-2acb-4024-aa2b-726e21708c9e" absoluteBounds="0.75, 0.75, 2.625, 8.1087190755208329">
+        <DomainClassMoniker name="/Adventureworks/dimproduct" />
+        <nestedChildShapes>
+          <elementListCompartment Id="f2b737cb-2c0b-4d74-9086-e892c8c5aff0" absoluteBounds="0.765, 1.26, 2.5949999999999998, 6.979939778645833" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="134a160d-e84f-4835-96d9-6a6e872b1a93" absoluteBounds="0.765, 8.2499397786458317, 2.5949999999999998, 0.2493896484375" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="70b4f809-e82a-452e-9de4-b559227949ac" absoluteBounds="0.765, 8.5093294270833333, 2.5949999999999998, 0.24938964843750089" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+        </nestedChildShapes>
+      </classShape>
+    </nestedChildShapes>
+  </entityDiagramsDiagram>
+</EntityDiagrams>

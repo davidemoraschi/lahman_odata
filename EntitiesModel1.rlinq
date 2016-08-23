@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DomainModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="2.0.0.0" name="Adventureworks" namespace="lahman_odata" showPropertiesCompartment="true" xmlns="http://www.telerik.com/ORM">
+  <orm:orm name="Adventureworks" backend="azure" default-schema="dbo" xmlns:orm="http://tempuri.org/ORM">
+    <orm:namespace name="lahman_odata" default="true">
+      <orm:class name="dimproduct" uniqueId="8fad7b52-daee-43ba-80d9-709d4787f497">
+        <orm:table name="DimProduct" />
+        <orm:identity>
+          <orm:key-generator name="autoinc">
+            <orm:key-generator-member property-name="productkey" />
+          </orm:key-generator>
+          <orm:single-field field-name="_productkey" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_productkey" property="productkey" behavior="readwrite" uniqueId="5f851593-ce10-45c0-bd41-90b317ae8bcc" type="System.Int32">
+          <orm:column name="ProductKey" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_productalternatekey" property="productalternatekey" behavior="readwrite" uniqueId="afadc233-2a6d-4b0f-b34e-ae3045c126b0" type="System.String">
+          <orm:column name="ProductAlternateKey" sql-type="nvarchar" nullable="true" length="25" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_productsubcategorykey" property="productsubcategorykey" behavior="readwrite" uniqueId="20e49650-5566-420a-8c9d-4931574ec089" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="ProductSubcategoryKey" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_weightunitmeasurecode" property="weightunitmeasurecode" behavior="readwrite" uniqueId="b47f4b26-a2d0-4a60-b9bf-5942c4056635" type="System.String">
+          <orm:column name="WeightUnitMeasureCode" sql-type="nchar" nullable="true" length="3" scale="0" ado-type="UnicodeStringFixedLength" />
+        </orm:field>
+        <orm:field name="_sizeunitmeasurecode" property="sizeunitmeasurecode" behavior="readwrite" uniqueId="a5234dbe-38a9-4f6b-96d4-fbb395f3e44c" type="System.String">
+          <orm:column name="SizeUnitMeasureCode" sql-type="nchar" nullable="true" length="3" scale="0" ado-type="UnicodeStringFixedLength" />
+        </orm:field>
+        <orm:field name="_englishproductname" property="englishproductname" behavior="readwrite" uniqueId="39ac0c29-a748-4841-ba28-8e979a8f3eb1" type="System.String">
+          <orm:column name="EnglishProductName" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_spanishproductname" property="spanishproductname" behavior="readwrite" uniqueId="651f84a7-4ef9-42fa-ab53-670aaedfb223" type="System.String">
+          <orm:column name="SpanishProductName" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_frenchproductname" property="frenchproductname" behavior="readwrite" uniqueId="ecf6b2a0-6004-483e-a2b1-cc0ed0c6e710" type="System.String">
+          <orm:column name="FrenchProductName" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_standardcost" property="standardcost" behavior="readwrite" uniqueId="3c216495-498c-43de-9ab4-8a18cef84f53" type="System.Nullable`1[[System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="StandardCost" sql-type="money" nullable="true" length="0" scale="0" ado-type="Currency" />
+        </orm:field>
+        <orm:field name="_finishedgoodsflag" property="finishedgoodsflag" behavior="readwrite" uniqueId="044ceba8-a5e1-4389-a16a-226c27ca6f78" type="System.Boolean">
+          <orm:column name="FinishedGoodsFlag" sql-type="bit" nullable="false" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="_color" property="color" behavior="readwrite" uniqueId="86dac3a6-b3e0-49e8-8752-4304a18bb203" type="System.String">
+          <orm:column name="Color" sql-type="nvarchar" nullable="false" length="15" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_safetystocklevel" property="safetystocklevel" behavior="readwrite" uniqueId="cf62dd6e-2746-46ef-aa78-36fd3817ecc8" type="System.Nullable`1[[System.Int16, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="SafetyStockLevel" sql-type="smallint" nullable="true" length="0" scale="0" ado-type="Int16" />
+        </orm:field>
+        <orm:field name="_reorderpoint" property="reorderpoint" behavior="readwrite" uniqueId="639b3502-632d-43de-8220-2a82588b1123" type="System.Nullable`1[[System.Int16, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="ReorderPoint" sql-type="smallint" nullable="true" length="0" scale="0" ado-type="Int16" />
+        </orm:field>
+        <orm:field name="_listprice" property="listprice" behavior="readwrite" uniqueId="ef8cd494-8beb-4c05-9841-7c8c38bda785" type="System.Nullable`1[[System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="ListPrice" sql-type="money" nullable="true" length="0" scale="0" ado-type="Currency" />
+        </orm:field>
+        <orm:field name="_size" property="size" behavior="readwrite" uniqueId="70c2180e-9752-4b4b-abc9-62a7c7bf9757" type="System.String">
+          <orm:column name="Size" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_sizerange" property="sizerange" behavior="readwrite" uniqueId="ae0aab91-2758-4140-a6c2-26d02fc318df" type="System.String">
+          <orm:column name="SizeRange" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_weight" property="weight" behavior="readwrite" uniqueId="f23697b2-ce73-4c34-bdf1-e1aab54b123f" type="System.Nullable`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="Weight" sql-type="float" nullable="true" length="0" scale="0" ado-type="Double" />
+        </orm:field>
+        <orm:field name="_daystomanufacture" property="daystomanufacture" behavior="readwrite" uniqueId="80d21732-dd42-4ea6-989a-2a923fa1a7aa" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="DaysToManufacture" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_productline" property="productline" behavior="readwrite" uniqueId="6091a082-1944-42a4-b685-d21f22eb431a" type="System.String">
+          <orm:column name="ProductLine" sql-type="nchar" nullable="true" length="2" scale="0" ado-type="UnicodeStringFixedLength" />
+        </orm:field>
+        <orm:field name="_dealerprice" property="dealerprice" behavior="readwrite" uniqueId="1c5a4bc5-4f49-47a1-b140-0f55092dfede" type="System.Nullable`1[[System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="DealerPrice" sql-type="money" nullable="true" length="0" scale="0" ado-type="Currency" />
+        </orm:field>
+        <orm:field name="_style" property="style" behavior="readwrite" uniqueId="9d228492-ef97-4539-a64e-9f12934f37b5" type="System.String">
+          <orm:column name="Style" sql-type="nchar" nullable="true" length="2" scale="0" ado-type="UnicodeStringFixedLength" />
+        </orm:field>
+        <orm:field name="_modelname" property="modelname" behavior="readwrite" uniqueId="0a524ae8-7028-4da8-a995-1dacb9ef22cc" type="System.String">
+          <orm:column name="ModelName" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_largephoto" property="largephoto" behavior="readwrite" uniqueId="67dcdeef-7f09-4eaf-9b7e-2daf8665f019" type="System.Byte[]">
+          <orm:column name="LargePhoto" sql-type="varbinary(max)" nullable="true" length="0" scale="0" ado-type="LongVarBinary" />
+        </orm:field>
+        <orm:field name="_englishdescription" property="englishdescription" behavior="readwrite" uniqueId="c11aa227-a9d8-493f-a00f-5841383e613d" type="System.String">
+          <orm:column name="EnglishDescription" sql-type="nvarchar" nullable="true" length="400" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_frenchdescription" property="frenchdescription" behavior="readwrite" uniqueId="e20676ad-4218-4968-b9d4-ace853756fd2" type="System.String">
+          <orm:column name="FrenchDescription" sql-type="nvarchar" nullable="true" length="400" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_chinesedescription" property="chinesedescription" behavior="readwrite" uniqueId="823e8608-c7dd-40dd-892c-bce72aa796f6" type="System.String">
+          <orm:column name="ChineseDescription" sql-type="nvarchar" nullable="true" length="400" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_arabicdescription" property="arabicdescription" behavior="readwrite" uniqueId="63ca9d3d-c3ca-4f67-84c4-dbc48fda43d0" type="System.String">
+          <orm:column name="ArabicDescription" sql-type="nvarchar" nullable="true" length="400" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_hebrewdescription" property="hebrewdescription" behavior="readwrite" uniqueId="a7d1e24f-4610-47be-991c-ad4cfb5f5033" type="System.String">
+          <orm:column name="HebrewDescription" sql-type="nvarchar" nullable="true" length="400" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_thaidescription" property="thaidescription" behavior="readwrite" uniqueId="5a9303ad-5ef6-4860-a50a-e26c54499f7e" type="System.String">
+          <orm:column name="ThaiDescription" sql-type="nvarchar" nullable="true" length="400" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_germandescription" property="germandescription" behavior="readwrite" uniqueId="dce8ad34-56f8-4a9f-8eca-adf54c4bb523" type="System.String">
+          <orm:column name="GermanDescription" sql-type="nvarchar" nullable="true" length="400" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_japanesedescription" property="japanesedescription" behavior="readwrite" uniqueId="5eed16d6-4a51-410d-8dc3-b322fd475cea" type="System.String">
+          <orm:column name="JapaneseDescription" sql-type="nvarchar" nullable="true" length="400" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_turkishdescription" property="turkishdescription" behavior="readwrite" uniqueId="d1214153-6610-4fed-abb0-66c6d7a5a33e" type="System.String">
+          <orm:column name="TurkishDescription" sql-type="nvarchar" nullable="true" length="400" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_startdate" property="startdate" behavior="readwrite" uniqueId="226eebbc-6929-47a9-9dd7-723656696602" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="StartDate" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="_enddate" property="enddate" behavior="readwrite" uniqueId="c9e8c008-3cb2-42f1-90ff-60c104d611ea" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="EndDate" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="_status" property="status" behavior="readwrite" uniqueId="1af6cdef-d34b-4b8e-a4c4-6ba7aad13ae9" type="System.String">
+          <orm:column name="Status" sql-type="nvarchar" nullable="true" length="7" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:index name="AK_DimProduct_ProductAlternateKey_StartDate" unique="true">
+          <orm:columnMapping>
+            <orm:column name="ProductAlternateKey" sql-type="nvarchar" nullable="true" length="25" scale="0" ado-type="UnicodeStringVariableLength" />
+          </orm:columnMapping>
+          <orm:columnMapping>
+            <orm:column name="StartDate" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+        </orm:index>
+        <orm:index name="IX_DimProduct_ProductSubcategoryKey">
+          <orm:columnMapping>
+            <orm:column name="ProductSubcategoryKey" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:class>
+    </orm:namespace>
+    <orm:schema schema="">
+      <orm:table name="DimProduct">
+        <orm:column name="ProductKey" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="ProductAlternateKey" sql-type="nvarchar" nullable="true" length="25" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="ProductSubcategoryKey" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="WeightUnitMeasureCode" sql-type="nchar" nullable="true" length="3" scale="0" ado-type="UnicodeStringFixedLength" />
+        <orm:column name="SizeUnitMeasureCode" sql-type="nchar" nullable="true" length="3" scale="0" ado-type="UnicodeStringFixedLength" />
+        <orm:column name="EnglishProductName" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="SpanishProductName" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="FrenchProductName" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="StandardCost" sql-type="money" nullable="true" length="0" scale="0" ado-type="Currency" />
+        <orm:column name="FinishedGoodsFlag" sql-type="bit" nullable="false" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="Color" sql-type="nvarchar" nullable="false" length="15" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="SafetyStockLevel" sql-type="smallint" nullable="true" length="0" scale="0" ado-type="Int16" />
+        <orm:column name="ReorderPoint" sql-type="smallint" nullable="true" length="0" scale="0" ado-type="Int16" />
+        <orm:column name="ListPrice" sql-type="money" nullable="true" length="0" scale="0" ado-type="Currency" />
+        <orm:column name="Size" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="SizeRange" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="Weight" sql-type="float" nullable="true" length="0" scale="0" ado-type="Double" />
+        <orm:column name="DaysToManufacture" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="ProductLine" sql-type="nchar" nullable="true" length="2" scale="0" ado-type="UnicodeStringFixedLength" />
+        <orm:column name="DealerPrice" sql-type="money" nullable="true" length="0" scale="0" ado-type="Currency" />
+        <orm:column name="Style" sql-type="nchar" nullable="true" length="2" scale="0" ado-type="UnicodeStringFixedLength" />
+        <orm:column name="ModelName" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="LargePhoto" sql-type="varbinary(max)" nullable="true" length="0" scale="0" ado-type="LongVarBinary" />
+        <orm:column name="EnglishDescription" sql-type="nvarchar" nullable="true" length="400" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="FrenchDescription" sql-type="nvarchar" nullable="true" length="400" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="ChineseDescription" sql-type="nvarchar" nullable="true" length="400" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="ArabicDescription" sql-type="nvarchar" nullable="true" length="400" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="HebrewDescription" sql-type="nvarchar" nullable="true" length="400" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="ThaiDescription" sql-type="nvarchar" nullable="true" length="400" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="GermanDescription" sql-type="nvarchar" nullable="true" length="400" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="JapaneseDescription" sql-type="nvarchar" nullable="true" length="400" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="TurkishDescription" sql-type="nvarchar" nullable="true" length="400" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="StartDate" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="EndDate" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="Status" sql-type="nvarchar" nullable="true" length="7" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:index name="AK_DimProduct_ProductAlternateKey_StartDate" unique="true">
+          <orm:columnMapping>
+            <orm:column name="ProductAlternateKey" sql-type="nvarchar" nullable="true" length="25" scale="0" ado-type="UnicodeStringVariableLength" />
+          </orm:columnMapping>
+          <orm:columnMapping>
+            <orm:column name="StartDate" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+        </orm:index>
+        <orm:index name="IX_DimProduct_ProductSubcategoryKey">
+          <orm:columnMapping>
+            <orm:column name="ProductSubcategoryKey" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:table>
+    </orm:schema>
+    <orm:relational-naming-settings>
+      <orm:source-strategy>Property</orm:source-strategy>
+      <orm:remove-camel-case>False</orm:remove-camel-case>
+    </orm:relational-naming-settings>
+  </orm:orm>
+  <ModelSettings xmlns="">
+    <AppConfigConnectionPropertyName>AdventureworksAzureConnection</AppConfigConnectionPropertyName>
+    <AppConfigConnectionString>Server=tcp:m8ft5fsown.database.windows.net,1433;Database=Adventureworks;User ID=davidem@m8ft5fsown;Password=Lepanto1571;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;</AppConfigConnectionString>
+    <NamingSettings>
+      <ClassRules>
+        <CaseMode>Lower</CaseMode>
+        <PluralizationMode>Singularize</PluralizationMode>
+      </ClassRules>
+      <FieldRules>
+        <AddPrefix>_</AddPrefix>
+        <CaseMode>Lower</CaseMode>
+      </FieldRules>
+      <PropertyRules>
+        <CaseMode>Lower</CaseMode>
+      </PropertyRules>
+      <NavigationPropertyRules>
+        <IsPrefixSuffixEnabled>false</IsPrefixSuffixEnabled>
+      </NavigationPropertyRules>
+    </NamingSettings>
+    <CodeGenerationSettings>
+      <MappingDefinitionType>Xml</MappingDefinitionType>
+    </CodeGenerationSettings>
+    <SchemaUpdateSettings />
+    <BackendConfigurationSettings>
+      <BackendConfiguration>
+        <Backend>Azure</Backend>
+        <ProviderName>System.Data.SqlClient</ProviderName>
+      </BackendConfiguration>
+    </BackendConfigurationSettings>
+  </ModelSettings>
+  <Types>
+    <DomainClass Id="8fad7b52-daee-43ba-80d9-709d4787f497" name="dimproduct" namespace="lahman_odata" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="productkey">
+      <Property Id="5f851593-ce10-45c0-bd41-90b317ae8bcc" name="productkey" type="Int32" label="productkey : Int32" kind="Persistent" identity="true" fieldName="_productkey" />
+      <Property Id="63ca9d3d-c3ca-4f67-84c4-dbc48fda43d0" name="arabicdescription" label="arabicdescription : String" kind="Persistent" fieldName="_arabicdescription" />
+      <Property Id="823e8608-c7dd-40dd-892c-bce72aa796f6" name="chinesedescription" label="chinesedescription : String" kind="Persistent" fieldName="_chinesedescription" />
+      <Property Id="86dac3a6-b3e0-49e8-8752-4304a18bb203" name="color" label="color : String" kind="Persistent" fieldName="_color" />
+      <Property Id="80d21732-dd42-4ea6-989a-2a923fa1a7aa" name="daystomanufacture" type="Int32" label="daystomanufacture : Int32" nullable="true" kind="Persistent" fieldName="_daystomanufacture" />
+      <Property Id="1c5a4bc5-4f49-47a1-b140-0f55092dfede" name="dealerprice" type="Decimal" label="dealerprice : Decimal" nullable="true" kind="Persistent" fieldName="_dealerprice" />
+      <Property Id="c9e8c008-3cb2-42f1-90ff-60c104d611ea" name="enddate" type="DateTime" label="enddate : DateTime" nullable="true" kind="Persistent" fieldName="_enddate" />
+      <Property Id="c11aa227-a9d8-493f-a00f-5841383e613d" name="englishdescription" label="englishdescription : String" kind="Persistent" fieldName="_englishdescription" />
+      <Property Id="39ac0c29-a748-4841-ba28-8e979a8f3eb1" name="englishproductname" label="englishproductname : String" kind="Persistent" fieldName="_englishproductname" />
+      <Property Id="044ceba8-a5e1-4389-a16a-226c27ca6f78" name="finishedgoodsflag" type="Boolean" label="finishedgoodsflag : Boolean" kind="Persistent" fieldName="_finishedgoodsflag" />
+      <Property Id="e20676ad-4218-4968-b9d4-ace853756fd2" name="frenchdescription" label="frenchdescription : String" kind="Persistent" fieldName="_frenchdescription" />
+      <Property Id="ecf6b2a0-6004-483e-a2b1-cc0ed0c6e710" name="frenchproductname" label="frenchproductname : String" kind="Persistent" fieldName="_frenchproductname" />
+      <Property Id="dce8ad34-56f8-4a9f-8eca-adf54c4bb523" name="germandescription" label="germandescription : String" kind="Persistent" fieldName="_germandescription" />
+      <Property Id="a7d1e24f-4610-47be-991c-ad4cfb5f5033" name="hebrewdescription" label="hebrewdescription : String" kind="Persistent" fieldName="_hebrewdescription" />
+      <Property Id="5eed16d6-4a51-410d-8dc3-b322fd475cea" name="japanesedescription" label="japanesedescription : String" kind="Persistent" fieldName="_japanesedescription" />
+      <Property Id="67dcdeef-7f09-4eaf-9b7e-2daf8665f019" name="largephoto" type="Byte[]" label="largephoto : Byte[]" kind="Persistent" fieldName="_largephoto" />
+      <Property Id="ef8cd494-8beb-4c05-9841-7c8c38bda785" name="listprice" type="Decimal" label="listprice : Decimal" nullable="true" kind="Persistent" fieldName="_listprice" />
+      <Property Id="0a524ae8-7028-4da8-a995-1dacb9ef22cc" name="modelname" label="modelname : String" kind="Persistent" fieldName="_modelname" />
+      <Property Id="afadc233-2a6d-4b0f-b34e-ae3045c126b0" name="productalternatekey" label="productalternatekey : String" kind="Persistent" fieldName="_productalternatekey" />
+      <Property Id="6091a082-1944-42a4-b685-d21f22eb431a" name="productline" label="productline : String" kind="Persistent" fieldName="_productline" />
+      <Property Id="20e49650-5566-420a-8c9d-4931574ec089" name="productsubcategorykey" type="Int32" label="productsubcategorykey : Int32" nullable="true" kind="Persistent" fieldName="_productsubcategorykey" />
+      <Property Id="639b3502-632d-43de-8220-2a82588b1123" name="reorderpoint" type="Int16" label="reorderpoint : Int16" nullable="true" kind="Persistent" fieldName="_reorderpoint" />
+      <Property Id="cf62dd6e-2746-46ef-aa78-36fd3817ecc8" name="safetystocklevel" type="Int16" label="safetystocklevel : Int16" nullable="true" kind="Persistent" fieldName="_safetystocklevel" />
+      <Property Id="70c2180e-9752-4b4b-abc9-62a7c7bf9757" name="size" label="size : String" kind="Persistent" fieldName="_size" />
+      <Property Id="ae0aab91-2758-4140-a6c2-26d02fc318df" name="sizerange" label="sizerange : String" kind="Persistent" fieldName="_sizerange" />
+      <Property Id="a5234dbe-38a9-4f6b-96d4-fbb395f3e44c" name="sizeunitmeasurecode" label="sizeunitmeasurecode : String" kind="Persistent" fieldName="_sizeunitmeasurecode" />
+      <Property Id="651f84a7-4ef9-42fa-ab53-670aaedfb223" name="spanishproductname" label="spanishproductname : String" kind="Persistent" fieldName="_spanishproductname" />
+      <Property Id="3c216495-498c-43de-9ab4-8a18cef84f53" name="standardcost" type="Decimal" label="standardcost : Decimal" nullable="true" kind="Persistent" fieldName="_standardcost" />
+      <Property Id="226eebbc-6929-47a9-9dd7-723656696602" name="startdate" type="DateTime" label="startdate : DateTime" nullable="true" kind="Persistent" fieldName="_startdate" />
+      <Property Id="1af6cdef-d34b-4b8e-a4c4-6ba7aad13ae9" name="status" label="status : String" kind="Persistent" fieldName="_status" />
+      <Property Id="9d228492-ef97-4539-a64e-9f12934f37b5" name="style" label="style : String" kind="Persistent" fieldName="_style" />
+      <Property Id="5a9303ad-5ef6-4860-a50a-e26c54499f7e" name="thaidescription" label="thaidescription : String" kind="Persistent" fieldName="_thaidescription" />
+      <Property Id="d1214153-6610-4fed-abb0-66c6d7a5a33e" name="turkishdescription" label="turkishdescription : String" kind="Persistent" fieldName="_turkishdescription" />
+      <Property Id="f23697b2-ce73-4c34-bdf1-e1aab54b123f" name="weight" type="Double" label="weight : Double" nullable="true" kind="Persistent" fieldName="_weight" />
+      <Property Id="b47f4b26-a2d0-4a60-b9bf-5942c4056635" name="weightunitmeasurecode" label="weightunitmeasurecode : String" kind="Persistent" fieldName="_weightunitmeasurecode" />
+    </DomainClass>
+  </Types>
+  <domainContext>
+    <domainModelHasDomainContext Id="4fd34b56-29ef-4b8a-8a86-027b3a7a7f42">
+      <domainContainer name="Adventureworks" namespace="lahman_odata" showPropertiesCompartment="true">
+        <entitySetProperty name="dimproducts" namespace="lahman_odata" type="dimproduct" label="dimproducts : IQueryable&lt;lahman_odata.dimproduct&gt;" />
+      </domainContainer>
+    </domainModelHasDomainContext>
+  </domainContext>
+</DomainModel>

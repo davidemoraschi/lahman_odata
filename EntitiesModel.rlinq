@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DomainModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="2.0.0.0" name="Lahman" namespace="lahman_odata" showPropertiesCompartment="true" xmlns="http://www.telerik.com/ORM">
+  <orm:orm name="Lahman" backend="azure" default-schema="dbo" xmlns:orm="http://tempuri.org/ORM">
+    <orm:namespace name="lahman_odata" default="true">
+      <orm:class name="master" uniqueId="6967405f-d010-44da-8876-e3e2d0c18215">
+        <orm:table name="Master" />
+        <orm:identity>
+          <orm:single-field field-name="_playerid" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_playerid" property="playerid" behavior="readwrite" uniqueId="dda3fa29-1347-4e1a-a31d-e0c49676a325" type="System.String">
+          <orm:column name="playerID" sql-type="nvarchar" nullable="false" length="10" scale="0" primary-key="true" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_birthyear" property="birthyear" behavior="readwrite" uniqueId="c442a5aa-8c6d-4824-9542-90e06d88687b" type="System.Nullable`1[[System.Int16, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="birthYear" sql-type="smallint" nullable="true" length="0" scale="0" ado-type="Int16" />
+        </orm:field>
+        <orm:field name="_birthmonth" property="birthmonth" behavior="readwrite" uniqueId="5af2df3e-76c8-4966-b21c-1095d1c8e77a" type="System.Nullable`1[[System.Int16, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="birthMonth" sql-type="smallint" nullable="true" length="0" scale="0" ado-type="Int16" />
+        </orm:field>
+        <orm:field name="_birthday" property="birthday" behavior="readwrite" uniqueId="3167b954-4732-46f5-82a3-e6578550ede2" type="System.Nullable`1[[System.Int16, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="birthDay" sql-type="smallint" nullable="true" length="0" scale="0" ado-type="Int16" />
+        </orm:field>
+        <orm:field name="_birthcountry" property="birthcountry" behavior="readwrite" uniqueId="c8b7c373-8be0-4724-a462-aa84713dbac8" type="System.String">
+          <orm:column name="birthCountry" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_birthstate" property="birthstate" behavior="readwrite" uniqueId="ab2e8b4d-8ce2-4483-9498-7d886424a737" type="System.String">
+          <orm:column name="birthState" sql-type="nvarchar" nullable="true" length="2" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_birthcity" property="birthcity" behavior="readwrite" uniqueId="85a3fbfd-0ec1-4655-87a8-2505575715dc" type="System.String">
+          <orm:column name="birthCity" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_deathyear" property="deathyear" behavior="readwrite" uniqueId="63447831-61b3-45ba-9885-4c9ff3903599" type="System.Nullable`1[[System.Int16, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="deathYear" sql-type="smallint" nullable="true" length="0" scale="0" ado-type="Int16" />
+        </orm:field>
+        <orm:field name="_deathmonth" property="deathmonth" behavior="readwrite" uniqueId="1d4825aa-8cbf-41df-8b05-8c90799eb088" type="System.Nullable`1[[System.Int16, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="deathMonth" sql-type="smallint" nullable="true" length="0" scale="0" ado-type="Int16" />
+        </orm:field>
+        <orm:field name="_deathday" property="deathday" behavior="readwrite" uniqueId="43be690f-d349-4bf0-a4e7-cbd1eb35fc86" type="System.Nullable`1[[System.Int16, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="deathDay" sql-type="smallint" nullable="true" length="0" scale="0" ado-type="Int16" />
+        </orm:field>
+        <orm:field name="_deathcountry" property="deathcountry" behavior="readwrite" uniqueId="132b41b8-befc-49b7-aed1-b52f74336d96" type="System.String">
+          <orm:column name="deathCountry" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_deathstate" property="deathstate" behavior="readwrite" uniqueId="0989e966-db18-4e93-a8fa-dd69d55158f2" type="System.String">
+          <orm:column name="deathState" sql-type="nvarchar" nullable="true" length="2" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_deathcity" property="deathcity" behavior="readwrite" uniqueId="866df85e-a38a-4626-8831-86c969864f11" type="System.String">
+          <orm:column name="deathCity" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_namefirst" property="namefirst" behavior="readwrite" uniqueId="ad6888d7-410c-4668-a659-7b03589fc44f" type="System.String">
+          <orm:column name="nameFirst" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_namelast" property="namelast" behavior="readwrite" uniqueId="b3b470b0-33e7-45b5-8a4c-f0d95dd77139" type="System.String">
+          <orm:column name="nameLast" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_namegiven" property="namegiven" behavior="readwrite" uniqueId="8a20eb35-c7af-4115-95c5-6eeabe61da3f" type="System.String">
+          <orm:column name="nameGiven" sql-type="nvarchar" nullable="true" length="255" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_weight" property="weight" behavior="readwrite" uniqueId="62de3571-e9c5-4c3a-8fb8-283589835888" type="System.Nullable`1[[System.Int16, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="weight" sql-type="smallint" nullable="true" length="0" scale="0" ado-type="Int16" />
+        </orm:field>
+        <orm:field name="_height" property="height" behavior="readwrite" uniqueId="d4f8ddf4-2263-475d-a8a5-4ac56c6ed59f" type="System.Nullable`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="height" sql-type="float" nullable="true" length="0" scale="0" ado-type="Double" />
+        </orm:field>
+        <orm:field name="_bats" property="bats" behavior="readwrite" uniqueId="2ecb0d44-70a9-418f-b2a9-b9d967433901" type="System.String">
+          <orm:column name="bats" sql-type="nvarchar" nullable="true" length="2" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_throws" property="throws" behavior="readwrite" uniqueId="58627e17-d352-4b2c-ba2b-4c85dd26322e" type="System.String">
+          <orm:column name="throws" sql-type="nvarchar" nullable="true" length="2" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_debut" property="debut" behavior="readwrite" uniqueId="445c8870-367b-4415-8908-0ed02550f249" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="debut" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="_finalgame" property="finalgame" behavior="readwrite" uniqueId="927f5a24-8fbb-41af-98ba-d4185c1d68f4" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="finalGame" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="_retroid" property="retroid" behavior="readwrite" uniqueId="2c8f245b-640f-496f-8389-68b8688792a5" type="System.String">
+          <orm:column name="retroID" sql-type="nvarchar" nullable="true" length="9" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_bbrefid" property="bbrefid" behavior="readwrite" uniqueId="b8368432-a017-4c3e-b60f-c24d3ac635fd" type="System.String">
+          <orm:column name="bbrefID" sql-type="nvarchar" nullable="true" length="9" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:index name="IX_Master_0">
+          <orm:columnMapping>
+            <orm:column name="birthYear" sql-type="smallint" nullable="true" length="0" scale="0" ado-type="Int16" />
+          </orm:columnMapping>
+        </orm:index>
+        <orm:index name="IX_Master_1">
+          <orm:columnMapping>
+            <orm:column name="birthCountry" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+          </orm:columnMapping>
+          <orm:columnMapping>
+            <orm:column name="birthState" sql-type="nvarchar" nullable="true" length="2" scale="0" ado-type="UnicodeStringVariableLength" />
+          </orm:columnMapping>
+          <orm:columnMapping>
+            <orm:column name="birthCity" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+          </orm:columnMapping>
+        </orm:index>
+        <orm:index name="IX_Master_2">
+          <orm:columnMapping>
+            <orm:column name="debut" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:class>
+    </orm:namespace>
+    <orm:schema schema="">
+      <orm:table name="Master">
+        <orm:column name="playerID" sql-type="nvarchar" nullable="false" length="10" scale="0" primary-key="true" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="birthYear" sql-type="smallint" nullable="true" length="0" scale="0" ado-type="Int16" />
+        <orm:column name="birthMonth" sql-type="smallint" nullable="true" length="0" scale="0" ado-type="Int16" />
+        <orm:column name="birthDay" sql-type="smallint" nullable="true" length="0" scale="0" ado-type="Int16" />
+        <orm:column name="birthCountry" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="birthState" sql-type="nvarchar" nullable="true" length="2" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="birthCity" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="deathYear" sql-type="smallint" nullable="true" length="0" scale="0" ado-type="Int16" />
+        <orm:column name="deathMonth" sql-type="smallint" nullable="true" length="0" scale="0" ado-type="Int16" />
+        <orm:column name="deathDay" sql-type="smallint" nullable="true" length="0" scale="0" ado-type="Int16" />
+        <orm:column name="deathCountry" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="deathState" sql-type="nvarchar" nullable="true" length="2" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="deathCity" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="nameFirst" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="nameLast" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="nameGiven" sql-type="nvarchar" nullable="true" length="255" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="weight" sql-type="smallint" nullable="true" length="0" scale="0" ado-type="Int16" />
+        <orm:column name="height" sql-type="float" nullable="true" length="0" scale="0" ado-type="Double" />
+        <orm:column name="bats" sql-type="nvarchar" nullable="true" length="2" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="throws" sql-type="nvarchar" nullable="true" length="2" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="debut" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="finalGame" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="retroID" sql-type="nvarchar" nullable="true" length="9" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="bbrefID" sql-type="nvarchar" nullable="true" length="9" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:index name="IX_Master_0">
+          <orm:columnMapping>
+            <orm:column name="birthYear" sql-type="smallint" nullable="true" length="0" scale="0" ado-type="Int16" />
+          </orm:columnMapping>
+        </orm:index>
+        <orm:index name="IX_Master_1">
+          <orm:columnMapping>
+            <orm:column name="birthCountry" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+          </orm:columnMapping>
+          <orm:columnMapping>
+            <orm:column name="birthState" sql-type="nvarchar" nullable="true" length="2" scale="0" ado-type="UnicodeStringVariableLength" />
+          </orm:columnMapping>
+          <orm:columnMapping>
+            <orm:column name="birthCity" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+          </orm:columnMapping>
+        </orm:index>
+        <orm:index name="IX_Master_2">
+          <orm:columnMapping>
+            <orm:column name="debut" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:table>
+    </orm:schema>
+    <orm:relational-naming-settings>
+      <orm:source-strategy>Property</orm:source-strategy>
+      <orm:remove-camel-case>False</orm:remove-camel-case>
+    </orm:relational-naming-settings>
+  </orm:orm>
+  <ModelSettings xmlns="">
+    <AppConfigConnectionPropertyName>LahmanAzureConnection</AppConfigConnectionPropertyName>
+    <AppConfigConnectionString>Server=tcp:m8ft5fsown.database.windows.net,1433;Database=Lahman;User ID=davidem@m8ft5fsown;Password=Lepanto1571;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;</AppConfigConnectionString>
+    <NamingSettings>
+      <ClassRules>
+        <CaseMode>Lower</CaseMode>
+        <PluralizationMode>Singularize</PluralizationMode>
+      </ClassRules>
+      <FieldRules>
+        <AddPrefix>_</AddPrefix>
+        <CaseMode>Lower</CaseMode>
+      </FieldRules>
+      <PropertyRules>
+        <CaseMode>Lower</CaseMode>
+      </PropertyRules>
+      <NavigationPropertyRules>
+        <IsPrefixSuffixEnabled>false</IsPrefixSuffixEnabled>
+      </NavigationPropertyRules>
+    </NamingSettings>
+    <CodeGenerationSettings>
+      <MappingDefinitionType>Xml</MappingDefinitionType>
+    </CodeGenerationSettings>
+    <SchemaUpdateSettings />
+    <BackendConfigurationSettings>
+      <BackendConfiguration>
+        <Backend>Azure</Backend>
+        <ProviderName>System.Data.SqlClient</ProviderName>
+      </BackendConfiguration>
+    </BackendConfigurationSettings>
+  </ModelSettings>
+  <Types>
+    <DomainClass Id="6967405f-d010-44da-8876-e3e2d0c18215" name="master" namespace="lahman_odata" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="dda3fa29-1347-4e1a-a31d-e0c49676a325" name="playerid" label="playerid : String" kind="Persistent" identity="true" fieldName="_playerid" />
+      <Property Id="2ecb0d44-70a9-418f-b2a9-b9d967433901" name="bats" label="bats : String" kind="Persistent" fieldName="_bats" />
+      <Property Id="b8368432-a017-4c3e-b60f-c24d3ac635fd" name="bbrefid" label="bbrefid : String" kind="Persistent" fieldName="_bbrefid" />
+      <Property Id="85a3fbfd-0ec1-4655-87a8-2505575715dc" name="birthcity" label="birthcity : String" kind="Persistent" fieldName="_birthcity" />
+      <Property Id="c8b7c373-8be0-4724-a462-aa84713dbac8" name="birthcountry" label="birthcountry : String" kind="Persistent" fieldName="_birthcountry" />
+      <Property Id="3167b954-4732-46f5-82a3-e6578550ede2" name="birthday" type="Int16" label="birthday : Int16" nullable="true" kind="Persistent" fieldName="_birthday" />
+      <Property Id="5af2df3e-76c8-4966-b21c-1095d1c8e77a" name="birthmonth" type="Int16" label="birthmonth : Int16" nullable="true" kind="Persistent" fieldName="_birthmonth" />
+      <Property Id="ab2e8b4d-8ce2-4483-9498-7d886424a737" name="birthstate" label="birthstate : String" kind="Persistent" fieldName="_birthstate" />
+      <Property Id="c442a5aa-8c6d-4824-9542-90e06d88687b" name="birthyear" type="Int16" label="birthyear : Int16" nullable="true" kind="Persistent" fieldName="_birthyear" />
+      <Property Id="866df85e-a38a-4626-8831-86c969864f11" name="deathcity" label="deathcity : String" kind="Persistent" fieldName="_deathcity" />
+      <Property Id="132b41b8-befc-49b7-aed1-b52f74336d96" name="deathcountry" label="deathcountry : String" kind="Persistent" fieldName="_deathcountry" />
+      <Property Id="43be690f-d349-4bf0-a4e7-cbd1eb35fc86" name="deathday" type="Int16" label="deathday : Int16" nullable="true" kind="Persistent" fieldName="_deathday" />
+      <Property Id="1d4825aa-8cbf-41df-8b05-8c90799eb088" name="deathmonth" type="Int16" label="deathmonth : Int16" nullable="true" kind="Persistent" fieldName="_deathmonth" />
+      <Property Id="0989e966-db18-4e93-a8fa-dd69d55158f2" name="deathstate" label="deathstate : String" kind="Persistent" fieldName="_deathstate" />
+      <Property Id="63447831-61b3-45ba-9885-4c9ff3903599" name="deathyear" type="Int16" label="deathyear : Int16" nullable="true" kind="Persistent" fieldName="_deathyear" />
+      <Property Id="445c8870-367b-4415-8908-0ed02550f249" name="debut" type="DateTime" label="debut : DateTime" nullable="true" kind="Persistent" fieldName="_debut" />
+      <Property Id="927f5a24-8fbb-41af-98ba-d4185c1d68f4" name="finalgame" type="DateTime" label="finalgame : DateTime" nullable="true" kind="Persistent" fieldName="_finalgame" />
+      <Property Id="d4f8ddf4-2263-475d-a8a5-4ac56c6ed59f" name="height" type="Double" label="height : Double" nullable="true" kind="Persistent" fieldName="_height" />
+      <Property Id="ad6888d7-410c-4668-a659-7b03589fc44f" name="namefirst" label="namefirst : String" kind="Persistent" fieldName="_namefirst" />
+      <Property Id="8a20eb35-c7af-4115-95c5-6eeabe61da3f" name="namegiven" label="namegiven : String" kind="Persistent" fieldName="_namegiven" />
+      <Property Id="b3b470b0-33e7-45b5-8a4c-f0d95dd77139" name="namelast" label="namelast : String" kind="Persistent" fieldName="_namelast" />
+      <Property Id="2c8f245b-640f-496f-8389-68b8688792a5" name="retroid" label="retroid : String" kind="Persistent" fieldName="_retroid" />
+      <Property Id="58627e17-d352-4b2c-ba2b-4c85dd26322e" name="throws" label="throws : String" kind="Persistent" fieldName="_throws" />
+      <Property Id="62de3571-e9c5-4c3a-8fb8-283589835888" name="weight" type="Int16" label="weight : Int16" nullable="true" kind="Persistent" fieldName="_weight" />
+    </DomainClass>
+  </Types>
+  <domainContext>
+    <domainModelHasDomainContext Id="8dfc4699-ffe1-4f24-b4b5-31b404b3962b">
+      <domainContainer name="Lahman" namespace="lahman_odata" showPropertiesCompartment="true">
+        <entitySetProperty name="masters" namespace="lahman_odata" type="master" label="masters : IQueryable&lt;lahman_odata.master&gt;" />
+      </domainContainer>
+    </domainModelHasDomainContext>
+  </domainContext>
+</DomainModel>

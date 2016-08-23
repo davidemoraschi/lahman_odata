@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityDiagrams>
+  <entityDiagramsDiagram dslVersion="2.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Lahman" isDefault="true">
+    <DomainModelMoniker name="/Lahman" />
+    <nestedChildShapes>
+      <classShape Id="ef1d55a4-d3ca-4308-967a-6b8214c0f36a" absoluteBounds="0.75, 0.75, 3, 5.993403320312499">
+        <DomainClassMoniker name="/Lahman/master" />
+        <nestedChildShapes>
+          <elementListCompartment Id="9a244612-39ce-4084-a95e-8d2d653584f6" absoluteBounds="0.765, 1.26, 2.9699999999999998, 4.8646240234375" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="9e3bf3a9-67a2-4b72-a228-47f3269843f4" absoluteBounds="0.765, 6.1346240234375, 2.9699999999999998, 0.2493896484375" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="3e0f0c3d-6f69-4a44-b780-56d4958b27b0" absoluteBounds="0.765, 6.3940136718749994, 2.9699999999999998, 0.2493896484375" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+        </nestedChildShapes>
+      </classShape>
+    </nestedChildShapes>
+  </entityDiagramsDiagram>
+</EntityDiagrams>
